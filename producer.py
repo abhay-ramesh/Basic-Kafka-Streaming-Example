@@ -8,7 +8,7 @@ producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
 
 for i in range(10):
     for i in range(5):
-        # Mae a request to get the current location of the ISS
+        # Make a request to get the current location of the ISS
         res=requests.get('http://api.open-notify.org/iss-now.json')
         data = res.content.decode('utf-8')
         print(data)
